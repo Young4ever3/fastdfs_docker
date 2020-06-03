@@ -13,6 +13,8 @@ RUN apt-get update
 RUN apt-get install git make gcc libpcre3-dev zlib1g-dev  build-essential --assume-yes
 
 # 复制工具包
+ADD nginx-1.15.4.tar.gz /usr/local/src/
+
 RUN mkdir -p /root/fastdfs
 
 RUN mkdir /root/fastdfs/tracker   \
